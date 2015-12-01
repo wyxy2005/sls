@@ -1,0 +1,18 @@
+objects = a.o b.o run.o
+
+run : $(objects)
+	gcc -o run $(objects)
+	echo OK
+
+run.o : run.c
+	gcc -c run.c -o run.o
+
+b.o : b.c 
+	gcc -o b.o -c b.c
+
+a.o : a.c a.h
+	gcc -c a.c -o a.o
+
+clean :
+	-rm -f a.o b.o run.o  
+	-rm -f run

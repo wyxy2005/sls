@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true">
+
+    <RelativeLayout
+        android:id="@+id/surface_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></RelativeLayout>
+
+
+    <fragment
+        android:name="com.xiaomi.mitv.show.ui.PlayerControllerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:tag="player_controller_fragment" />
+
+    <fragment
+        android:name="com.xiaomi.mitv.show.ui.EmptyFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:tag="empty_fragment" />
+</RelativeLayout>

@@ -1,0 +1,6 @@
+android build :
+    JACK and JILL : .java -> .dex with no .class
+        disable : Android.mk LOCAL_JACK_ENABLED := disabled
+
+    ninja ?
+        disable : shell export USE_NANJA=false

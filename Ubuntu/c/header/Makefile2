@@ -1,0 +1,2 @@
+justecho : README
+	echo Makefile2.is.running

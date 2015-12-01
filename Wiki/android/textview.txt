@@ -1,0 +1,11 @@
+计算textview一行能放几个字？
+
+两种计算方法：
+
+1.            FontMetrics fontMetrics = paint.getFontMetrics();  
+            int firstLineLen = paint
+                    .breakText(text, true, mTextViewWidth, null);
+但是textview有一处　line breaking算法，即标点符号不放在行首与行尾、一个单词也不会分行显示，所以会提前换行，这时方法1的结果是不对的，要用方法2
+2.
+          StaticLayout staticLayout = new StaticLayout(text, paint, mTextViewWidth, Alignment.ALIGN_NORMAL, 1, 0, false);
+            int firstLineLen =staticLayout.getLineStart(1);

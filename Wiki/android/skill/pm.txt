@@ -1,0 +1,77 @@
+1.1：察看已安装的包：
+pm list package
+此时则显示所有已经安装的包名。
+
+pm list package -f
+也显示associated文件所在目录(即保存的APK文件)
+
+1.2：察看已知的权限组：
+pm list permission-groups
+
+1.3：察看所有已知的权限：
+pm list permissions
+
+1.4：列出所有硬件相关信息：
+pm list features
+
+结果通常类似：
+feature:reqGlEsVersion=0x20000
+feature:android.hardware.bluetooth
+feature:android.hardware.camera
+feature:android.hardware.location
+feature:android.hardware.location.network
+feature:android.hardware.microphone
+feature:android.hardware.sensor.accelerometer
+feature:android.hardware.sensor.compass
+feature:android.hardware.touchscreen
+feature:android.hardware.wifi
+
+
+1.5：列出指定包名的  associated 文件 (APK存档文件) 所在：
+例如：
+pm path com.TDiJoy.fane
+package:/mnt/asec/com.TDiJoy.fane-1/pkg.apk
+
+
+1.6: 安装APK：
+pm install [-l] [-r] [-t] [-i INSTALLER_PACKAGE_NAME] [-s] [-f] PATH
+
+PATH 指 APK文件绝对路径和文件名。
+
+例如：
+pm install /data/3dijoy_fane.apk
+
+这几个参数很有用：
+-r: 安装一个已经安装的APK，保持其数据不变。
+-i：指定安装的包名。(没试出来)
+-s: 安装到SDCard上。
+-f: 安装到内部Flash上。
+
+
+
+1.6：卸载APK：
+pm uninstall 包名。
+例如：
+pm uninstall com.TDiJoy.fane
+
+
+1.7: 得到和设置缺省安装位置：
+The getInstallLocation command gets the current install location
+  0 [auto]: Let system decide the best location
+  1 [internal]: Install on internal device storage
+  2 [external]: Install on external media
+
+The setInstallLocation command changes the default install location
+  0 [auto]: Let system decide the best location
+  1 [internal]: Install on internal device storage
+  2 [external]: Install on external media
+
+pm getInstallLocation
+得到缺省的安装位置。
+
+设置：
+pm setInstallLocation <0|1|2>
+
+0: 自动。
+1：内部Flash。
+2：扩展存储设备。

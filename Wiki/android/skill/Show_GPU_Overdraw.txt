@@ -1,0 +1,4 @@
+Show GPU Overdraw
+    Settings -> Developer options(开发者选项)
+    Android提供的用于检查Overdraw的工具.
+    Overdraw：一个像素在同一帧的时间内被绘制了多次

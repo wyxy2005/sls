@@ -1,0 +1,9 @@
+proguard 
+    home_page       http://proguard.sourceforge.net/
+------------------
+java.io.IOException: Can't read [unity-classes.jar] (Can't process class [com/unity3d/player/UnityPlayer.class] (Unknown verification type [191] in stack map frame))
+
+解决方法就是：
+找到proguard源码中proguard/src/proguard/classfile/ClassConstants.java类，然后修改ATTR_StackMapTable的值，将原来的的StackMapTable改为dummy.
+1       public static final String ATTR_StackMapTable = "dummy";//"StackMapTable";
+

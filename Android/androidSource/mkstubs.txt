@@ -1,0 +1,11 @@
+project path:
+    <android source root>/development/tools/mkstubs
+
+description:
+    rebuild jar to hide specific classes, fields or method.
+    SEE@ <android source root>/development/tools/mkstubs/README.txt
+
+usage:
+    java -jar mkstubs.jar input.jar output.jar -pattern +pattern
+
+

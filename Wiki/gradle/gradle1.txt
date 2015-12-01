@@ -1,0 +1,35 @@
+gradle
+    home_page       https://gradle.org/;
+
+gradle keep repositories in ~/.gradle
+    include proguard.jar (usually proguard.jar is in <Android sdk/tools/proguard>/)
+
+if one module and its library module save the same jar in each libs/, eclipse is OK ; but gradle can't build
+
+------------
+gradle proguard don't support "libraryjars" in proguard-project.txt
+------------
+gradle proguard build:
+release {
+    minifyEnabled true
+    proguardFiles getDefaultProguardFile('proguard-android.txt'),'proguard-project.txt'
+}
+-----------
+lintOptions {
+        abortOnError false
+    }
+----------------
+ compile fileTree(dir: 'libs', include: '*.jar')
+    compile project(':MiTV:MiTVLive:InteractiveLiveTV')
+    provided files('../Build/libs/jars/MitvAPI.jar')
+----------------------
+android gradle script don't need task ,bacause:
+apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
+
+android pluggin is defined in 
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.1.0'
+    }
+-----------------------
+

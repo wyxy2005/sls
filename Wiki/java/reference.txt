@@ -1,0 +1,3 @@
+SoftReference : gc until memory  run out.
+WeakReference : gc after no reference.
+PhantomReference : trace gc.

@@ -1,0 +1,6 @@
+if( booleanValue == true){
+    booleanValue = false;
+}
+
+AtomicBoolean解决两行之间不是原子性的问题.
+atomicBoolean.compareAndSet(expect,update)

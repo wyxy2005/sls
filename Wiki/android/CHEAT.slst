@@ -1,0 +1,7 @@
+#### android 动画会因为activity onpause而暂停，仅仅是暂停，activity onresume后动画会继续执行完。所以如果在onpause改变了状态，onAnimationEnd时可能会出问题。所以onpause要把动画全清了。 
+
+### adb remount 失败：remount failed: Operation not permitted
+su
+mount -o rw,remount -t yaffs2 /dev/block/mtdblock3 /system
+chmod 777 /system
+****************************************************

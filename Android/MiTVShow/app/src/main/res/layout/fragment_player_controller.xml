@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.xiaomi.mitv.show.ui.SourceView
+        android:id="@+id/source_view"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:background="#400000ff"></com.xiaomi.mitv.show.ui.SourceView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/scale_controller_view"
+        android:layout_toRightOf="@+id/source_view">
+
+        <include layout="@layout/view_usb_controll" />
+
+        <include layout="@layout/view_url_controll" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/scale_controller_view"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/full_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="全屏" />
+
+        <Button
+            android:id="@+id/screen_scale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="屏幕缩小" />
+    </LinearLayout>
+
+</RelativeLayout>

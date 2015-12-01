@@ -1,0 +1,4 @@
+ StackTraceElement[] stackElements = new Throwable().getStackTrace();
+for(){
+    print  stackElements[i];
+}

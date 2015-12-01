@@ -1,0 +1,26 @@
+uses-library
+uses-permission
+----------------
+
+
+
+代码混淆
+
+class B extands A ;
+
+A a = new B();
+
+a.exe();未混淆时执行B 的exe，混淆时执行A 的exe
+
+!!
+
+dumpsys命令
+
+
+setApplicationEnabledSetting
+--------------------------------
+
+inflate 
+
+//    private void init() {
+//        LayoutInflater.from(getContext()).inflate(R.layout.news_video_list_view, this, true);

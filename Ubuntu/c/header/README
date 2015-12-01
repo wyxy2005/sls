@@ -1,0 +1,4 @@
+gcc -c a.c
+gcc -c b.c
+gcc -c run.c
+gcc -o exe a.o b.o run.o

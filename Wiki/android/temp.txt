@@ -1,0 +1,15 @@
+android.net.TrafficStats android流程统计
+
+
+
+android intent :
+the size limit of Intent is lower than 1MB .(How to check ?)
+
+event bus:
+反射onEvent(object param) 中param,然后分发
+
+android adb sendevent:
+getevent&sendevent 产生raw event ，经过event hub处理成gesture
+ 
+
+mediaplayer　播放在线视频setDataSource出错:可能是需要网络权限

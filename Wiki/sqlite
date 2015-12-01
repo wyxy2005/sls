@@ -1,0 +1,6 @@
+sqlitebrowser ubuntu下的sqlite可视化工具
+
+sqlite console:
+.table   --show tables
+.exit   
+.database  --show current database

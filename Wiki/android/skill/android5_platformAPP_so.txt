@@ -1,0 +1,4 @@
+android 5.0 上系统签名的应用不能加载data区下的so:
+
+或者改为第三方应用(换签名)
+或者android:sharedUserId="android.uid.system"改为更核心的系统应用.

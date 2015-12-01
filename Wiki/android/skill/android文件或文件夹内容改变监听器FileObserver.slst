@@ -1,0 +1,57 @@
+android文件或文件夹内容改变监听器（FileObserver）
+
+一. 概述：
+    android.os包下的FileObserver类是一个用于监听文件访问、创建、修改、删除、移动等操作的监听器，基于linux的INotify。
+    FileObserver是个抽象类，必须继承它才能使用。每个FileObserver对象监听一个单独的文件或者文件夹，如果监视的是一个文件夹，那么文件夹下所有的文件和级联子目录的改变都会触发监听的事件。
+二. 监听的事件类型：
+（1）ACCESS，即文件被访问。
+（2）MODIFY，文件被修改。
+（3）ATTRIB，文件属性被修改，如 chmod、chown、touch 等。
+（4）CLOSE_WRITE，可写文件被 close。
+（5）CLOSE_NOWRITE，不可写文件被 close。
+（6）OPEN，文件被 open。
+（7）MOVED_FROM，文件被移走,如 mv。
+（8）MOVED_TO，文件被移来，如 mv、cp。
+
+（9）CREATE，创建新文件。
+（10）DELETE，文件被删除，如 rm。
+（11）DELETE_SELF，自删除，即一个可执行文件在执行时删除自己。
+（12）MOVE_SELF，自移动，即一个可执行文件在执行时移动自己。
+（13）CLOSE，文件被关闭，等同于(IN_CLOSE_WRITE | IN_CLOSE_NOWRITE)。
+（14）ALL_EVENTS，包括上面的所有事件。
+三. 例：
+    （1）创建目录监听器： 
+public class SDCardListener extends FileObserver {   
+ 
+       public SDCardListener(String path) { 
+              /*  
+               * 这种构造方法是默认监听所有事件的,如果使用 super(String,int)这种构造方法，  
+               * 则int参数是要监听的事件类型.  
+               */  
+              super(path);   
+       }   
+   
+       @Override  
+       public void onEvent(int event, String path) {          
+              switch(event) {   
+                     case FileObserver.ALL_EVENTS:   
+                            Log.d("all", "path:"+ path);   
+                            break;   
+                     case FileObserver.CREATE:   
+                            Log.d("Create", "path:"+ path);   
+                            break;   
+              }   
+      }   
+}
+（2）给目录设置监听器：
+SDCardListener listener = new SDCardListener("目录");   
+
+//开始监听   
+listener.startWatching();
+   
+/*  
+ * 在这里做一些操作，比如创建目录什么的  
+ */  
+
+//停止监听   
+listener.stopWatching();  

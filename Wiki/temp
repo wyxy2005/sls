@@ -1,0 +1,82 @@
+
+entityClass = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];//取该类的泛形类　class A <T>即取出Ｔ的具体类形
+gson.fromJson(response, entityClass);//gson可以反射出具体的entiryclass，但是怎么具体指定哪一层才是entityclass,现实情况来看，能自动智能找到对应的层
+－－－－－－－－－－－－－－－－－－－－
+
+
+java object wait() notify()
+
+hmac
+
+
+mockup prd工具
+
+
+android : uses-permission 自定义permission uses-library
+
+
+textView.getPaint().setFakeBoldText(true);//加粗
+
+
+
+
+FocusFinder.getInstance().findNextFocus
+
+
+
+在verticalGridView里的item
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:minHeight="500dp">
+
+用minHeight才能保证500dp
+不用minHeight时，高度就是wrapcontent
+why?
+------------------
+
+
+
+
+FragmentTransaction.detach/attach会调onstart onstop 还会重新createView;
+FragmentTransaction.show/hide 不会createView，也不会onresume onpause
+
+
+
+declare-styleable
+
+
+
+stay hungry stay foolish.You gotta be a fool to believe that will work
+
+http://blog.csdn.net/Luoshengyang/   android 
+
+
+
+
+http://www.bjjs.gov.cn/publish/portal0/tab4021/
+http://www.bjgjj.gov.cn/
+
+打机印ip 10.235.176.250
+
+
+-----------------------------------------------------------------
+From: 黄其武 
+Sent: 2015年3月5日 11:59
+To: Leo Liu 刘成岗; MIUI ROM开发工程师
+Subject: 答复: 分享一篇很棒的文章：Google 发布 Android 性能优化典范
+
+这是原帖子：
+
+http://hukai.me/android-performance-patterns/#jtss-tsina
+
+这里是视频：
+
+https://www.youtube.com/playlist?list=PLWz5rJ2EKKc9CBxr3BVjPTPoDPLdPIFCE
+
+视频是youtube的 我一直没下载出来，谁有能力下出来放到wiki吧。
+
+--
+BRS
+黄其武 | MIUI系统优化组
+

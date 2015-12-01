@@ -1,0 +1,30 @@
+root
+  |-iabi
+  |-art
+  |-bionic  :google为android新做的类似glibc的库
+  |-bootable
+  |-build
+  |-cts
+  |-dalvik
+  |-developers
+  |-development
+  |-device
+  |-docs
+  |-external
+  |-frameworks
+  |-hardware
+  |-libcore
+  |-libnativehelper
+  |-Makefile
+  |-ndk
+  |-out     : build out put files
+  |-packages
+  |-pdk
+  |-prebuilts
+  |-sdk
+  |-system
+  |-tools
+
+------------------------------------------------
+packages/app   : system\app\<*.apk> project
+frameworks/base/core/java/android   : android api for android.jar android.*.*

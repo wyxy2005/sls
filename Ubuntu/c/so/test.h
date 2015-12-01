@@ -1,0 +1,2 @@
+void myprint();
+void go();

@@ -1,0 +1,13 @@
+onServiceConnected(ComponentName name, IBinder service) {
+            Log.v(TAG, "onServiceConnected");
+            if(service == null){
+                return ;
+            }
+            mBinder = ITVKuyunService.Stub.asInterface(service);
+
+
+attention!
+
+bind service 获取binder 是ITVKuyunService.Stub.asInterface,不是强转.
+
+在同一个应用中可以强转,不同应用中不能强转

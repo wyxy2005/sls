@@ -1,0 +1,8 @@
+grade :android plugin
+hadoop
+go
+mongo
+jmdns
+multicast:http://blog.csdn.net/yunjinwang/article/details/8125524
+长连接
+android实时推送

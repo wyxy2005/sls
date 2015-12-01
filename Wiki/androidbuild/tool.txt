@@ -1,0 +1,6 @@
+android
+    : Android SDK Manager
+    : 可用以用来生成avd  命令 android avd
+    : path <android source dir>/prebuilts/devtools
+
+emulator    

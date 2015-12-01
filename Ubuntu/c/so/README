@@ -1,0 +1,10 @@
+gcc a.c b.c -fPIC -shared -o libtest.so 
+gcc run.c -L. -ltest -o out
+
+-L <path>:path是要包启的so的路径 
+-lxxx :xxx是libxxx.so的名字的中字部分
+
+
+生成的libtest.so要放在/lib 或/usr/lib下，才能生效
+
+不然，ldd out 时，会提示 libtest.so ==> no found

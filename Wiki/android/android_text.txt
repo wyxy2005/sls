@@ -1,0 +1,4 @@
+android text view , line breaking(换行):
+http://unicode.org/reports/tr14/#LD1
+
+

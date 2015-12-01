@@ -1,0 +1,7 @@
+Android 5.0 启动service不再能使用隐式的intent.
+
+显式的intent必须设setPackage或setCompont.
+
+setPackage设的是service的package name
+----------------------------------------
+packagemanager.queryIntentService可以用action去查相应的serviceInfo

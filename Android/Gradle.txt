@@ -1,0 +1,4 @@
+issue : Execution failed for task ':app:mergeDebugResources'. > Crunching Cruncher gsrtc.png failed, see logs
+build.gradle-> android{...} ->
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false

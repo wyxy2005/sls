@@ -1,0 +1,6 @@
+######  AndroidManifest.xml
+    activity-alias可以把一个activity的入口分成多个。比如在桌面上放两个入口。
+
+    taskAffinity可以把不同入口的activity合到同一个task中。比如，设置中有许多子设置项入口各不同，分别进入时，recent（近期任务）里有多个入口，其实都是进设置。taskAffinity指定同一个，就可以解决recent中多入口的问题
+
+////////////////////////////////////
