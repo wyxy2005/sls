@@ -1,7 +1,0 @@
-http://geosoft.no/development/android.html
-
-create R.java-----------
-aapt package -v -f -m -S ./res -J ./gen -M AndroidManifest.xml -I /opt/android/android-sdk-linux/platforms/android-22/android.jar
-
-
-
