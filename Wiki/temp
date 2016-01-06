@@ -1,3 +1,8 @@
+BufferedWriter
+FileWriter what diff？
+
+
+
 
 entityClass = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];//取该类的泛形类　class A <T>即取出Ｔ的具体类形
 gson.fromJson(response, entityClass);//gson可以反射出具体的entiryclass，但是怎么具体指定哪一层才是entityclass,现实情况来看，能自动智能找到对应的层
