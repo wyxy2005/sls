@@ -1,0 +1,1 @@
+view.playSoundEffect is used to 按键音
