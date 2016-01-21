@@ -1,3 +1,10 @@
+ft.replace(android.R.id.content, frag, frag.getClass().getCanonicalName());
+android.R.id.content是activity根视图的id
+----------------------------------------------------------
+
+
+
+
 uses-library
 uses-permission
 ----------------
