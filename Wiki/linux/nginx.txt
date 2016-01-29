@@ -1,3 +1,8 @@
+>>>>>>>>>>>>>>> config
+
+
+
+>>>>>>>>>>>>>>> install & start
 1. download pcre, zlib and openssl on each MainPage.
 2. install pcre, zlib and openssl:
     ./configure
@@ -8,4 +13,5 @@
     ./configure --prefix=<nginx dir>  --with-pcre=<pcre dir>  --with-zlib=<zlib dir> --with-openssl=<openssl dir>
     make
     make install
-
+4. start:
+	/usr/local/nginx/sbin/nginx
