@@ -1,4 +1,10 @@
->>>>>>>>>>>>>>> config
+>>>>>>>>>>>>>>> 密码认证
+1. create password file
+	htpasswd <password_file> <name> <password>
+2.config
+            auth_basic "input you user name and password";   
+            auth_basic_user_file first_password_file;   
+	
 
 
 
