@@ -4,4 +4,5 @@ Activity.java
 	|---- UI用 PhoneWindow 实现(/frameworks/base/core/java/com/android/internal/policy)
 	|
 	|---- Activity的根View的res存在<Source>/frameworks/base/core/res/res/layout/screen*.xml
-
+	|---- 根layout包含activity的content 、title等
+	|---- setContentView 对根layout的anroid.R.layout.content添加view
