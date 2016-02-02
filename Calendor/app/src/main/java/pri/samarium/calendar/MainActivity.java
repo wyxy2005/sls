@@ -2,8 +2,18 @@ package pri.samarium.calendar;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Point;
 import android.os.Bundle;
+import android.text.BoringLayout;
+import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.Display;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
+
+import pri.samarium.calendar.ui.MyCalendor;
 
 public class MainActivity extends Activity {
     private static final String TAG = "sls.activity";
@@ -13,6 +23,16 @@ public class MainActivity extends Activity {
         Log.i(TAG, "onCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        MyCalendor calendor = new MyCalendor(this);
+        ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        calendor.setLayoutParams(layoutParams);
+        View root = findViewById(R.id.myroot);
+        ((FrameLayout) root).addView(calendor);
+
+        Display defaultDisplay = getWindow().getWindowManager().getDefaultDisplay();
+        Point p = new Point();
+        defaultDisplay.getSize(p);
+        Log.i(TAG, "screen width:" + p.x + ",height:" + p.y);
     }
 
     @Override
@@ -63,4 +83,3 @@ public class MainActivity extends Activity {
         super.onDestroy();
     }
 }
-
