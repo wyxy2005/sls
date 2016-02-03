@@ -7,3 +7,7 @@ PhoneWindowManager
 
 
 	|---- screenshot 由SurfaceControl.java调用navive方法截屏
+		通过反射截屏{没验证是否需要权限}
+	    final Class<?> aClass = Class.forName("android.view.SurfaceControl");
+            final Method screenshot = aClass.getDeclaredMethod("screenshot", int.class, int.class);
+            Bitmap obj = (Bitmap)screenshot.invoke(aClass,1920,1080);
