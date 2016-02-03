@@ -2,3 +2,8 @@ PhoneWindowManager
 	|---- location : frameworks/base/services/core/java/com/android/server/policy/PhoneWindowManager.java
 	|---- interceptKeyBeforeDispatching() :系统级分发按键。
 		home \ screenshot \power 等键在这里处理
+
+
+
+
+	|---- screenshot 由SurfaceControl.java调用navive方法截屏
