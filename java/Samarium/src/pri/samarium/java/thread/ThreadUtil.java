@@ -1,6 +1,6 @@
 package pri.samarium.java.thread;
 
-import pri.samarium.Config;
+import pri.samarium.common.Config;
 
 public class ThreadUtil {
 
