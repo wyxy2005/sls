@@ -1,1 +1,7 @@
 view.playSoundEffect is used to 按键音
+
+------------------------------------------
+
+LayoutInflater.inflate(resId,RootView);
+如果RootView不是null，生成的view直接加在RootView上，不用再RootView.addView了。
+
