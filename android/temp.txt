@@ -25,9 +25,3 @@ dumpsys命令
 
 
 setApplicationEnabledSetting
---------------------------------
-
-inflate 
-
-//    private void init() {
-//        LayoutInflater.from(getContext()).inflate(R.layout.news_video_list_view, this, true);
