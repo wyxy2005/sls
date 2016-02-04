@@ -1,0 +1,16 @@
+View 
+    protected void onDraw(Canvas canvas) {
+        Log.i(TAG, "onDraw:" + canvas.getWidth() + "," + canvas.getHeight());
+        Paint mPaint = new Paint();
+        canvas.drawColor(Color.TRANSPARENT);//background
+        mPaint.setAntiAlias(true);//抗锯齿
+        mPaint.setDither(true);//抗抖动
+        mPaint.setARGB(255, 255, 0, 0);//画笔颜色
+        mPaint.setStyle(Paint.Style.STROKE);//设置为空心
+        mPaint.setStrokeWidth(50);//边框粗细
+        mPaint.setStrokeCap(Paint.Cap.BUTT);//画笔头是圆还是方
+        RectF rect = new RectF(0 + 10, 0 + 10, min - 10, min - 10);//绘画区域
+        canvas.drawRoundRect(rect, 50, 50, mPaint);//圆角矩形
+        canvas.drawLine(100,100,300,300,mPaint);//画线
+	canvas.drawArc()//画弧
+    }
