@@ -1,0 +1,1 @@
+蒙特·卡罗方法（Monte Carlo method），也称统计模拟方法
